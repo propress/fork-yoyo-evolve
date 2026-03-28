@@ -11,7 +11,7 @@
 | 4 | 提示执行与容错 | ch04-prompt-execution.md | run_prompt调用链 / 自动重试 / 上下文溢出恢复 / 审计日志 / 文件变更追踪与撤销 | ✅ |
 | 5 | 命令系统全解 | ch05-commands.md | 81条命令的分类架构 / Git集成 / 文件操作 / 项目分析 / 搜索体系 / 会话管理 | ⏳ |
 | 6 | 上下文窗口管理 | ch06-context-management.md | 双阈值压缩策略 / Checkpoint模式 / yoagent CompactionStrategy / 子代理上下文隔离 | ⏳ |
-| 7 | 自我进化流水线 | ch07-evolution-pipeline.md | evolve.sh全流程 / 三阶段(评估→规划→实施) / 赞助者系统 / Issue处理 / 学习记录 | ⏳ |
+| 7 | 自我进化流水线 | ch07-evolution-pipeline.md | evolve.sh全流程 / 三阶段(评估→规划→实施) / 赞助者系统 / Issue处理 / 学习记录 | ✅ |
 | 8 | 记忆与学习系统 | ch08-memory-system.md | 双层记忆架构 / JSONL存档 / 活跃上下文合成 / 社交学习 / 项目记忆(.yoyo/) | ⏳ |
 | 9 | 项目演进史：从200行到3万行 | ch09-evolution-history.md | Day 1-4原型期 / Day 5-12基础设施期 / Day 13-20成熟期 / Day 21-28精炼期 / 架构演进图 | ⏳ |
 | 10 | 端到端追踪 | ch10-end-to-end.md | 场景一：用户在REPL提问 / 场景二：自动进化一次 / 场景三：社区Issue处理，串联全书 | ⏳ |
