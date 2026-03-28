@@ -8,7 +8,7 @@
 | 1 | 数据流全景：一次完整交互的旅程 | ch01-data-flow.md | 用户输入 → CLI解析 → Agent构建 → LLM调用 → 工具执行 → 响应渲染，每步数据形态变化 | ✅ |
 | 2 | 核心引擎：Agent 构建与工具体系 | ch02-agent-engine.md | AgentConfig / yoagent集成 / 工具包装三层架构(Guard→Confirm→Truncate) / 自定义工具(Bash/AskUser/Todo) | ✅ |
 | 3 | REPL 交互循环 | ch03-repl.md | rustyline集成 / Tab补全 / 多行输入 / 命令路由 / 会话状态管理 | ✅ |
-| 4 | 提示执行与容错 | ch04-prompt-execution.md | run_prompt调用链 / 自动重试 / 上下文溢出恢复 / 审计日志 / 文件变更追踪与撤销 | ⏳ |
+| 4 | 提示执行与容错 | ch04-prompt-execution.md | run_prompt调用链 / 自动重试 / 上下文溢出恢复 / 审计日志 / 文件变更追踪与撤销 | ✅ |
 | 5 | 命令系统全解 | ch05-commands.md | 81条命令的分类架构 / Git集成 / 文件操作 / 项目分析 / 搜索体系 / 会话管理 | ⏳ |
 | 6 | 上下文窗口管理 | ch06-context-management.md | 双阈值压缩策略 / Checkpoint模式 / yoagent CompactionStrategy / 子代理上下文隔离 | ⏳ |
 | 7 | 自我进化流水线 | ch07-evolution-pipeline.md | evolve.sh全流程 / 三阶段(评估→规划→实施) / 赞助者系统 / Issue处理 / 学习记录 | ⏳ |
