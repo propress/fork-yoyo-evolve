@@ -9,8 +9,8 @@
 | 2 | 核心引擎：Agent 构建与工具体系 | ch02-agent-engine.md | AgentConfig / yoagent集成 / 工具包装三层架构(Guard→Confirm→Truncate) / 自定义工具(Bash/AskUser/Todo) | ✅ |
 | 3 | REPL 交互循环 | ch03-repl.md | rustyline集成 / Tab补全 / 多行输入 / 命令路由 / 会话状态管理 | ✅ |
 | 4 | 提示执行与容错 | ch04-prompt-execution.md | run_prompt调用链 / 自动重试 / 上下文溢出恢复 / 审计日志 / 文件变更追踪与撤销 | ✅ |
-| 5 | 命令系统全解 | ch05-commands.md | 81条命令的分类架构 / Git集成 / 文件操作 / 项目分析 / 搜索体系 / 会话管理 | ⏳ |
-| 6 | 上下文窗口管理 | ch06-context-management.md | 双阈值压缩策略 / Checkpoint模式 / yoagent CompactionStrategy / 子代理上下文隔离 | ⏳ |
+| 5 | 命令系统全解 | ch05-commands.md | 81条命令的分类架构 / Git集成 / 文件操作 / 项目分析 / 搜索体系 / 会话管理 | ✅ |
+| 6 | 上下文窗口管理 | ch06-context-management.md | 双阈值压缩策略 / Checkpoint模式 / yoagent CompactionStrategy / 子代理上下文隔离 | ✅ |
 | 7 | 自我进化流水线 | ch07-evolution-pipeline.md | evolve.sh全流程 / 三阶段(评估→规划→实施) / 赞助者系统 / Issue处理 / 学习记录 | ✅ |
 | 8 | 记忆与学习系统 | ch08-memory-system.md | 双层记忆架构 / JSONL存档 / 活跃上下文合成 / 社交学习 / 项目记忆(.yoyo/) | ✅ |
 | 9 | 项目演进史：从200行到3万行 | ch09-evolution-history.md | Day 1-4原型期 / Day 5-12基础设施期 / Day 13-20成熟期 / Day 21-28精炼期 / 架构演进图 | ✅ |
@@ -58,17 +58,16 @@
 
 ## 下次续写指引
 ### 从哪里继续
-第 5 章（命令系统全解）和第 6 章（上下文窗口管理）尚待写作。
-
-优先级建议：第 6 章的上下文管理更有技术深度，建议先写；第 5 章作为命令分类参考手册可以最后完成。
+全部 11 章（ch00-ch10）已完成。如需后续工作：
+- 校对和润色各章之间的过渡语言
+- 验证流程图中的模块名和函数名与最新代码一致
+- 补充第 5 章命令组的更多细节（目前是概览级）
 
 ### 交接备忘
-- 已完成 9 章（ch00-ch04, ch07-ch10），覆盖了核心引擎、数据流、进化流水线、记忆系统、演进史和端到端追踪
-- 第 5 章需要分析 commands.rs 中 81 条命令的路由逻辑和 6 个 commands_*.rs 文件的职责划分
-- 第 6 章需要深入 yoagent 的 CompactionStrategy 和 yoyo 的双阈值策略（70%/80%）以及 checkpoint 模式
-- 前序章节的术语一致性：Turn、Session、Skill、GuardedTool 等已在第 0 章建立
+- 已完成全部 11 章，覆盖：序言、数据流、核心引擎、REPL、提示执行、命令系统、上下文管理、进化流水线、记忆系统、演进史、端到端追踪
+- 全书遵循"先讲是什么再讲里面有什么"的认知路径
+- 每章有质检报告，验证了讲解节奏、代码纪律、流程图准确性等维度
 
 ### 待验证项
-- yoagent CompactionStrategy 的三级压缩具体实现（需读 yoagent 源码）
-- SubAgentTool 的上下文窗口大小是否继承父 Agent 的设置
-- commands.rs 中命令路由的完整 match 分支数
+- yoagent CompactionStrategy 的三级压缩具体实现（需读 yoagent 源码验证）
+- SubAgentTool 的上下文窗口大小是否继承父 Agent 的设置（需源码验证）
