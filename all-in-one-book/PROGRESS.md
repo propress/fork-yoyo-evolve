@@ -14,7 +14,7 @@
 | 7 | 自我进化流水线 | ch07-evolution-pipeline.md | evolve.sh全流程 / 三阶段(评估→规划→实施) / 赞助者系统 / Issue处理 / 学习记录 | ✅ |
 | 8 | 记忆与学习系统 | ch08-memory-system.md | 双层记忆架构 / JSONL存档 / 活跃上下文合成 / 社交学习 / 项目记忆(.yoyo/) | ✅ |
 | 9 | 项目演进史：从200行到3万行 | ch09-evolution-history.md | Day 1-4原型期 / Day 5-12基础设施期 / Day 13-20成熟期 / Day 21-28精炼期 / 架构演进图 | ✅ |
-| 10 | 端到端追踪 | ch10-end-to-end.md | 场景一：用户在REPL提问 / 场景二：自动进化一次 / 场景三：社区Issue处理，串联全书 | ⏳ |
+| 10 | 端到端追踪 | ch10-end-to-end.md | 场景一：用户在REPL提问 / 场景二：自动进化一次 / 场景三：社区Issue处理，串联全书 | ✅ |
 
 ## 章节规划说明
 
@@ -58,15 +58,17 @@
 
 ## 下次续写指引
 ### 从哪里继续
-从第0章（序言）开始写作。
+第 5 章（命令系统全解）和第 6 章（上下文窗口管理）尚待写作。
+
+优先级建议：第 6 章的上下文管理更有技术深度，建议先写；第 5 章作为命令分类参考手册可以最后完成。
 
 ### 交接备忘
-- 已完成深度阅读：17个Rust源文件、所有脚本、技能文件、身份文件、日志、commit历史(796条)
-- 项目总规模：~35K行Rust代码，17个源文件，1346个测试
-- 关键认知：yoyo = CLI Agent + 自我进化流水线 + 社区交互 + 记忆系统
-- 架构核心：yoagent 提供 Agent/Tool/Event 基础，yoyo 在其上构建 REPL、命令、进化
+- 已完成 9 章（ch00-ch04, ch07-ch10），覆盖了核心引擎、数据流、进化流水线、记忆系统、演进史和端到端追踪
+- 第 5 章需要分析 commands.rs 中 81 条命令的路由逻辑和 6 个 commands_*.rs 文件的职责划分
+- 第 6 章需要深入 yoagent 的 CompactionStrategy 和 yoyo 的双阈值策略（70%/80%）以及 checkpoint 模式
+- 前序章节的术语一致性：Turn、Session、Skill、GuardedTool 等已在第 0 章建立
 
 ### 待验证项
-- evolve.sh 中 Phase A 和 Phase B 的具体超时参数
-- yoagent 的 CompactionStrategy 三级压缩具体实现
-- SubAgentTool 的上下文隔离机制细节
+- yoagent CompactionStrategy 的三级压缩具体实现（需读 yoagent 源码）
+- SubAgentTool 的上下文窗口大小是否继承父 Agent 的设置
+- commands.rs 中命令路由的完整 match 分支数
