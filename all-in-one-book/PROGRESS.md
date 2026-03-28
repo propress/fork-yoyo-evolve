@@ -5,7 +5,7 @@
 | # | 章节标题 | 文件名 | 核心覆盖 | 状态 |
 |---|---------|--------|---------|------|
 | 0 | 序言：一只小章鱼的成长实验 | ch00-preface.md | 项目定位 / 架构全景图 / 核心概念词典 / 代码库地图 / 极简全流程 | ✅ |
-| 1 | 数据流全景：一次完整交互的旅程 | ch01-data-flow.md | 用户输入 → CLI解析 → Agent构建 → LLM调用 → 工具执行 → 响应渲染，每步数据形态变化 | ⏳ |
+| 1 | 数据流全景：一次完整交互的旅程 | ch01-data-flow.md | 用户输入 → CLI解析 → Agent构建 → LLM调用 → 工具执行 → 响应渲染，每步数据形态变化 | ✅ |
 | 2 | 核心引擎：Agent 构建与工具体系 | ch02-agent-engine.md | AgentConfig / yoagent集成 / 工具包装三层架构(Guard→Confirm→Truncate) / 自定义工具(Bash/AskUser/Todo) | ⏳ |
 | 3 | REPL 交互循环 | ch03-repl.md | rustyline集成 / Tab补全 / 多行输入 / 命令路由 / 会话状态管理 | ⏳ |
 | 4 | 提示执行与容错 | ch04-prompt-execution.md | run_prompt调用链 / 自动重试 / 上下文溢出恢复 / 审计日志 / 文件变更追踪与撤销 | ⏳ |
